@@ -1,0 +1,20 @@
+{
+  "ARC_TESTNET": {
+    "chainId": 5042002,
+    "rpc": "https://rpc.testnet.arc.network",
+    "rpcAlternatives": [
+      "https://rpc.blockdaemon.testnet.arc.network",
+      "https://rpc.drpc.testnet.arc.network",
+      "https://rpc.quicknode.testnet.arc.network"
+    ],
+    "explorer": "https://testnet.arcscan.app",
+    "nativeCurrency": {
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": 18
+    },
+    "usdcNativeAddress": "0x3600000000000000000000000000000000000000",
+    "arcNamesAddress": "",
+    "deployerAddress": ""
+  }
+}
