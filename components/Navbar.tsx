@@ -66,13 +66,25 @@ function Navbar({
           >
             <Image src="/logo-1.png" alt="Arc" width={48} height={48} />
           </Link>
-          <Link
-            href="/"
-            className="hidden text-sm font-semibold sm:inline"
-            style={{ color: "var(--arc-cream)" }}
-          >
-            Arc Name Hub
-          </Link>
+          <div className="flex flex-col leading-tight">
+            <Link
+              href="/"
+              className="text-sm font-semibold"
+              style={{ color: "var(--arc-cream)" }}
+            >
+              Arc Name Hub
+            </Link>
+            <span
+              className="px-2 py-0.5 rounded-full text-xs font-semibold tracking-wide self-start mt-0.5"
+              style={{
+                background: "rgba(255,184,0,0.12)",
+                color: "var(--arc-yellow)",
+                border: "1px solid rgba(255,184,0,0.35)",
+              }}
+            >
+              Testnet
+            </span>
+          </div>
         </div>
 
         <div className="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-3">
