@@ -1,32 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --arc-bg:         #020f29;
-  --arc-surface:    #133250;
-  --arc-surface2:   #295882;
-  --arc-border:     rgba(219, 205, 169, 0.24);
-  --arc-primary:    #295882;
-  --arc-mid:        #133250;
-  --arc-cream:      #dbcda9;
-  --arc-blue:       #295882;
-  --arc-blue-glow:  rgba(219, 205, 169, 0.18);
-  --arc-cyan:       #00D2FF;
-  --arc-green:      #00E5A0;
-  --arc-red:        #FF4D6A;
-  --arc-yellow:     #FFB800;
-  --arc-text:       #f6f1e5;
-  --arc-muted:      rgba(219, 205, 169, 0.58);
-  --arc-muted2:     rgba(246, 241, 229, 0.72);
+  --arc-bg: #020f29;
+  --arc-surface: #133250;
+  --arc-surface2: #295882;
+  --arc-border: rgba(219, 205, 169, 0.24);
+  --arc-primary: #295882;
+  --arc-mid: #133250;
+  --arc-cream: #dbcda9;
+  --arc-blue: #295882;
+  --arc-blue-glow: rgba(219, 205, 169, 0.18);
+  --arc-cyan: #00d2ff;
+  --arc-green: #00e5a0;
+  --arc-red: #ff4d6a;
+  --arc-yellow: #ffb800;
+  --arc-text: #f6f1e5;
+  --arc-muted: rgba(219, 205, 169, 0.58);
+  --arc-muted2: rgba(246, 241, 229, 0.72);
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   background: var(--arc-bg);
   color: var(--arc-text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   margin: 0;
@@ -34,7 +40,11 @@ html, body {
 
 body {
   background:
-    radial-gradient(circle at 50% -10%, rgba(41, 88, 130, 0.44), transparent 34rem),
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(41, 88, 130, 0.44),
+      transparent 34rem
+    ),
     linear-gradient(180deg, #020f29 0%, #061a34 48%, #020f29 100%);
 }
 
@@ -43,37 +53,87 @@ body {
   color: var(--arc-text);
 }
 
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--arc-bg); }
-::-webkit-scrollbar-thumb { background: var(--arc-border); border-radius: 3px; }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--arc-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--arc-border);
+  border-radius: 3px;
+}
 
 @keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes modalIn {
-  from { opacity: 0; transform: scale(0.96) translateY(8px); }
-  to   { opacity: 1; transform: scale(1) translateY(0); }
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 @keyframes skeletonPulse {
-  0%, 100% { opacity: 0.4; }
-  50%       { opacity: 0.8; }
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-14px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes floatSway {
+  0%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+  35% {
+    transform: translate(-7px, -11px);
+  }
+  70% {
+    transform: translate(5px, -7px);
+  }
 }
 
 .animate-fade-slide-up {
@@ -97,7 +157,7 @@ body {
 .spinner {
   width: 18px;
   height: 18px;
-  border: 2px solid rgba(219,205,169,0.2);
+  border: 2px solid rgba(219, 205, 169, 0.2);
   border-top-color: var(--arc-cream);
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
@@ -106,7 +166,9 @@ body {
 }
 
 .btn-blue-glow:hover {
-  box-shadow: 0 0 20px var(--arc-blue-glow), 0 0 40px rgba(79,110,247,0.08);
+  box-shadow:
+    0 0 20px var(--arc-blue-glow),
+    0 0 40px rgba(79, 110, 247, 0.08);
 }
 
 .arc-connect [data-rk] button {
@@ -126,8 +188,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(219,205,169,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(219,205,169,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(219, 205, 169, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(219, 205, 169, 0.04) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: radial-gradient(circle at center, black, transparent 70%);
 }
@@ -140,10 +202,18 @@ body {
   flex: 0 0 auto;
 }
 
-.avatar-dot.sand { background: linear-gradient(135deg, #dbcda9, #8f7f58); }
-.avatar-dot.gold { background: linear-gradient(135deg, #dbcda9, #f0dc89); }
-.avatar-dot.green { background: linear-gradient(135deg, #7bdab7, #295882); }
-.avatar-dot.blue { background: linear-gradient(135deg, #7fa6d3, #133250); }
+.avatar-dot.sand {
+  background: linear-gradient(135deg, #dbcda9, #8f7f58);
+}
+.avatar-dot.gold {
+  background: linear-gradient(135deg, #dbcda9, #f0dc89);
+}
+.avatar-dot.green {
+  background: linear-gradient(135deg, #7bdab7, #295882);
+}
+.avatar-dot.blue {
+  background: linear-gradient(135deg, #7fa6d3, #133250);
+}
 
 .feature-card {
   background: rgba(2, 15, 41, 0.78);
@@ -161,10 +231,7 @@ body {
   display: grid;
   place-items: center;
   border-radius: 999px;
-  font-size: 5rem;
-  font-weight: 800;
-  color: var(--arc-cream);
-  box-shadow: 0 20px 70px rgba(41, 88, 130, 0.42);
+  overflow: hidden;
 }
 
 .protocol-mark.arc {
@@ -173,6 +240,7 @@ body {
   width: 14rem;
   height: 14rem;
   background: radial-gradient(circle at 35% 25%, #dbcda9, #295882 58%, #133250);
+  box-shadow: 0 24px 80px rgba(41, 88, 130, 0.55), 0 0 0 1px rgba(219, 205, 169, 0.2);
 }
 
 .protocol-mark.base {
@@ -180,9 +248,24 @@ body {
   top: 18%;
   width: 13rem;
   height: 13rem;
-  background: radial-gradient(circle, #f6f1e5 0 35%, #295882 36% 100%);
-  color: #295882;
-  font-size: 7rem;
+  background: radial-gradient(circle at 40% 35%, #1e4a74, #133250 60%, #08192e);
+  box-shadow: 0 24px 80px rgba(19, 50, 80, 0.65), 0 0 0 1px rgba(219, 205, 169, 0.12);
+}
+
+.protocol-ring {
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.protocol-ring.outer {
+  inset: 3%;
+  border: 1px solid rgba(219, 205, 169, 0.08);
+}
+
+.protocol-ring.inner {
+  inset: 20%;
+  border: 1px dashed rgba(219, 205, 169, 0.05);
 }
 
 .bubble {
@@ -191,12 +274,48 @@ body {
   border-radius: 999px;
 }
 
-.bubble.one { left: 14%; top: 16%; width: 5.2rem; height: 5.2rem; background: #7bdab7; }
-.bubble.two { left: 48%; top: 10%; width: 3rem; height: 3rem; background: #88aef1; }
-.bubble.three { right: 7%; bottom: 26%; width: 3.3rem; height: 3.3rem; background: #dbcda9; }
-.bubble.four { left: 48%; bottom: 13%; width: 7.4rem; height: 7.4rem; background: #88aef1; }
-.bubble.five { left: 4%; bottom: 18%; width: 3rem; height: 3rem; background: #dbcda9; }
-.bubble.six { right: 30%; top: 8%; width: 5.3rem; height: 5.3rem; background: #8c96a6; }
+.bubble.one {
+  left: 14%;
+  top: 16%;
+  width: 5.2rem;
+  height: 5.2rem;
+  background: #7bdab7;
+}
+.bubble.two {
+  left: 48%;
+  top: 10%;
+  width: 3rem;
+  height: 3rem;
+  background: #88aef1;
+}
+.bubble.three {
+  right: 7%;
+  bottom: 26%;
+  width: 3.3rem;
+  height: 3.3rem;
+  background: #dbcda9;
+}
+.bubble.four {
+  left: 48%;
+  bottom: 13%;
+  width: 7.4rem;
+  height: 7.4rem;
+  background: #88aef1;
+}
+.bubble.five {
+  left: 4%;
+  bottom: 18%;
+  width: 3rem;
+  height: 3rem;
+  background: #dbcda9;
+}
+.bubble.six {
+  right: 30%;
+  top: 8%;
+  width: 5.3rem;
+  height: 5.3rem;
+  background: #8c96a6;
+}
 
 .faq-row {
   border-bottom: 1px solid rgba(219, 205, 169, 0.2);

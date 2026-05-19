@@ -1,24 +1,29 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { Providers } from './providers'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'ArcNames - Your identity on Arc',
-  description: 'Register your .arc domain name on Arc testnet. Send and receive USDC with a name anyone can remember.',
-}
+  title: "ArcNameHub - Your identity on Arc",
+  description:
+    "Register your .arc domain name on Arc testnet. Send and receive USDC with a name anyone can remember.",
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className="h-full">
       <body
         className={`${inter.className} min-h-full`}
-        style={{ background: 'var(--arc-bg)', color: 'var(--arc-text)' }}
+        style={{ background: "var(--arc-bg)", color: "var(--arc-text)" }}
       >
         <Providers>{children}</Providers>
       </body>
     </html>
-  )
+  );
 }

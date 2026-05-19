@@ -101,4 +101,23 @@ export const ARCNAMES_ABI = [
     inputs: [{ name: 'name', type: 'string' }],
     outputs: [],
   },
+  {
+    name: 'NameRegistered',
+    type: 'event',
+    inputs: [
+      { name: 'name',   type: 'string',  indexed: false },
+      { name: 'owner',  type: 'address', indexed: false },
+      { name: 'expiry', type: 'uint256', indexed: false },
+      { name: 'price',  type: 'uint256', indexed: false },
+    ],
+  },
+  {
+    name: 'NameTransferred',
+    type: 'event',
+    inputs: [
+      { name: 'name', type: 'string',  indexed: false },
+      { name: 'from', type: 'address', indexed: false },
+      { name: 'to',   type: 'address', indexed: false },
+    ],
+  },
 ] as const

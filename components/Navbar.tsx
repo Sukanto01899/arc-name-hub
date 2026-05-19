@@ -1,6 +1,8 @@
 import { ARCNAMES_ABI, ARCNAMES_ADDRESS } from "@/lib/contracts";
 import { shortenAddress } from "@/lib/domain";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useAccount, useReadContract } from "wagmi";
@@ -54,21 +56,23 @@ function Navbar({
     >
       <nav className="mx-auto flex w-full max-w-[1920px] items-center justify-between gap-3">
         <div className="flex shrink-0 items-center gap-3">
-          <div
-            className="flex h-12 w-12 items-center justify-center rounded-[8px] font-black"
+          <Link
+            href="/"
+            className="flex items-center justify-center rounded-[8px] font-black overflow-hidden"
             style={{
               background: "var(--arc-primary)",
               color: "var(--arc-cream)",
             }}
           >
-            A
-          </div>
-          <span
+            <Image src="/logo-1.png" alt="Arc" width={48} height={48} />
+          </Link>
+          <Link
+            href="/"
             className="hidden text-sm font-semibold sm:inline"
             style={{ color: "var(--arc-cream)" }}
           >
-            ArcNames
-          </span>
+            Arc Name Hub
+          </Link>
         </div>
 
         <div className="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-3">
