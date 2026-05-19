@@ -82,12 +82,36 @@ function Navbar({
                 border: "1px solid rgba(255,184,0,0.35)",
               }}
             >
-              Testnet
+              Arc Testnet
             </span>
           </div>
         </div>
 
         <div className="flex min-w-0 flex-1 items-center justify-end gap-2 sm:gap-3">
+          <Link
+            href="/integrate"
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all hover:opacity-80"
+            style={{
+              background: "#295882",
+              border: "1px solid #295882",
+              color: "#dbcda9",
+            }}
+          >
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+            Add to Your App
+          </Link>
           {!isConnected ? (
             <div className="arc-connect flex min-w-0 justify-end">
               <ConnectButton
@@ -127,18 +151,18 @@ function Navbar({
                 aria-label="Open profile"
               >
                 <span
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-black"
+                  className="flex h-10 w-10 shrink-0 rounded-full overflow-hidden"
                   style={{
-                    background: showProfilePanel
-                      ? "var(--arc-cream)"
-                      : "var(--arc-primary)",
-                    color: showProfilePanel
-                      ? "var(--arc-bg)"
-                      : "var(--arc-cream)",
-                    border: "1px solid rgba(219,205,169,0.28)",
+                    border: `1.5px solid ${showProfilePanel ? "var(--arc-cream)" : "rgba(219,205,169,0.28)"}`,
                   }}
                 >
-                  A
+                  <Image
+                    src="/logo-1.png"
+                    alt="Profile"
+                    width={40}
+                    height={40}
+                    style={{ objectFit: "cover" }}
+                  />
                 </span>
                 <span
                   className="hidden min-w-0 truncate text-sm font-bold md:inline md:text-base"

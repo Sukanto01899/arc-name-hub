@@ -298,8 +298,8 @@ function DomainCard({
         <div
           className="w-12 h-12 rounded-full flex shrink-0 items-center justify-center font-bold text-lg select-none"
           style={{
-            background: "rgba(246,241,229,0.15)",
-            color: "var(--arc-text)",
+            background: "rgba(219,205,169,0.15)",
+            color: "var(--arc-cream)",
           }}
         >
           {initial}
@@ -309,7 +309,7 @@ function DomainCard({
         <div className="flex-1 min-w-0">
           <p
             className="font-bold text-base truncate"
-            style={{ color: "var(--arc-text)" }}
+            style={{ color: "var(--arc-cream)" }}
           >
             {name}.arc
           </p>
